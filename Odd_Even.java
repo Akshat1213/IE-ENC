@@ -5,9 +5,6 @@ class Odd_Even_class{
         n  = num;
     }
     void oddOrEven(){
-        Scanner obj = new Scanner(System.in);
-        System.out.print("Enter a number:");
-        int n = obj.nextInt();
         for(int i = 0;i<=n;i++){
             if(2*i == n){
                 System.out.println("Even");
@@ -25,7 +22,7 @@ public class Odd_Even {
         Scanner obj = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int n = obj.nextInt();
-        Odd_even_class oec = new Odd_Even_class(n);
+        Odd_Even_class oec = new Odd_Even_class(n);
         oec.oddOrEven();
     }
 }
