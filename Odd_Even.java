@@ -1,18 +1,28 @@
 import java.util.*;
+class OddException extends Exception{
+    OddException(String m){
+        super(m);
+    }
+}
+
+class EvenException extends Exception{
+    EvenException(String m){
+        super(m);
+    }
+}
+
 class Odd_Even_class{
     int n;
     Odd_Even_class(int num){
         n  = num;
     }
-    void oddOrEven(){
+    void oddOrEven() throws OddException,EvenException{
         for(int i = 0;i<=n;i++){
-            if(2*i == n){
-                System.out.println("Even");
-                System.exit(0);
+                if(2*i == n){
+                throw new EvenException("Even");
             }
             if((2*i)+1 == n){
-                System.out.println("Odd");
-                System.exit(0);
+                throw new OddException("Odd");
             }
         }
     }
@@ -23,6 +33,12 @@ public class Odd_Even {
         System.out.println("Enter a number: ");
         int n = obj.nextInt();
         Odd_Even_class oec = new Odd_Even_class(n);
-        oec.oddOrEven();
+        try{
+            oec.oddOrEven();
+        }catch(OddException e){
+            System.out.println(e.getMessage());
+        }catch(EvenException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
