@@ -1,6 +1,10 @@
 import java.util.*;
-public class Odd_Even {
-    public static void main(String[] args) {
+class Odd_Even_class{
+    int n;
+    Odd_Even_class(int num){
+        n  = num;
+    }
+    void oddOrEven(){
         Scanner obj = new Scanner(System.in);
         System.out.print("Enter a number:");
         int n = obj.nextInt();
@@ -14,5 +18,14 @@ public class Odd_Even {
                 System.exit(0);
             }
         }
+    }
+}
+public class Odd_Even {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = obj.nextInt();
+        Odd_even_class oec = new Odd_Even_class(n);
+        oec.oddOrEven();
     }
 }
