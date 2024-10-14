@@ -39,5 +39,6 @@ public class SetMatrix {
             }
             System.out.println();
         }
+        obj.close();
     }
 }
