@@ -19,5 +19,6 @@ public class MaxSubArray {
             }
         }
         System.out.println("Largest sum:"+max);
+        obj.close();
     }
 }
